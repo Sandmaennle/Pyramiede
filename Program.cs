@@ -2,7 +2,9 @@
 
 int höhe = Convert.ToInt32(Console.ReadLine());
 
-string s = "x";
+Console.WriteLine("Welches Zeichen soll als Inhalt gewählt werden?");
+string s = Console.ReadLine();
+
 string s1 = s + s;
 
 for (int i = höhe; i > 0; i--)
