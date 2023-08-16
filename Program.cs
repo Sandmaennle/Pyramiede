@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("Hallo, wie hoch soll ihre Pyramide sein?");
+
+int höhe = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(höhe);
+
+Console.ReadKey();
