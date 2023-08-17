@@ -62,12 +62,20 @@ else
         s3 = s;
         for (int j = i; j < höhe-1; j++) 
         {
-            s3 += s1;
+            for (int k = 0; k < (s.Length * 2); k++)
+            {
+                Console.ForegroundColor = (ConsoleColor)r.Next(Enum.GetValues(typeof(ConsoleColor)).Length);
+                Console.Write(s);
+            }
         }
         Console.WriteLine(s3);
+
         for (int l = -1; l < i; l++)
         {
-            Console.Write(leerzeichen);
+            for (int f = 0; f < s.Length;f++)
+            {
+                Console.Write(leerzeichen);
+            }
         }
     }
 }
