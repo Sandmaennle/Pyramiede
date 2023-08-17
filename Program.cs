@@ -1,4 +1,8 @@
-﻿Console.WriteLine("Hallo, wie hoch soll ihre Pyramide sein?");
+﻿using System;
+
+Random r = new Random();
+
+Console.WriteLine("Hallo, wie hoch soll ihre Pyramide sein?");
 
 int höhe = Convert.ToInt32(Console.ReadLine());
 
@@ -32,11 +36,23 @@ if (s2 == "n")
     {
         for (int j = i; j > 1; j--)
         {
-            Console.Write(leerzeichen);
+            for (int f = 0; f < s.Length; f++)
+            {
+                Console.Write(leerzeichen);
+            }
         }
-
+        
+        for (int l = höhe; l > i; l--)
+        {
+            for (int k = 0; k < (s.Length * 2); k++)
+            {
+                Console.ForegroundColor = (ConsoleColor)r.Next(Enum.GetValues(typeof(ConsoleColor)).Length);
+                Console.Write(s);
+            }
+        }
+        Console.ForegroundColor = (ConsoleColor)r.Next(Enum.GetValues(typeof(ConsoleColor)).Length);
         Console.WriteLine(s);
-        s += s1;
+
     }
 }
 else
